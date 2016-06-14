@@ -1,4 +1,4 @@
-require_relative 'test.rb'
+require_relative 'robot.rb'
 
 class Command
 	def initialize file_path

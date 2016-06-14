@@ -20,14 +20,21 @@ class Robot
 	end
 
 	def move
-		if @f == 'NORTH'
-			@y += 1 if @y >= 0 and @y < (@board.height - 1)
-		elsif @f == 'SOUTH'
-			@y -= 1 if @y > 0 and @y <= (@board.height - 1)
-		elsif @f == 'EAST'
-			@x += 1 if @x >= 0 and @x < (@board.width - 1)
-		elsif @f == 'WEST'
-			@x -= 1 if @x > 0 and @x <= (@board.width - 1)
+		x = @x
+		y = @y
+		case @f
+		when 'NORTH'
+			y += 1
+		when 'SOUTH'
+			y -= 1
+		when 'EAST'
+			x += 1
+		when 'WEST'
+			x -= 1
+		end
+		if x >= 0 or y >= 0 or x < @board.width or y < @board.height
+			@x = x
+			@y = y
 		end
 	end
 
