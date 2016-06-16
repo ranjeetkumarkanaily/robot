@@ -12,7 +12,7 @@ class Robot
 	def initialize
 		@x, @y = 0, 0
 		@f = ''
-		@board = Board.new 7, 7
+		@board = Board.new 5, 5
 	end
 
 	def place x, y, f
@@ -65,6 +65,6 @@ class Robot
 	end
 
 	def to_s
-		puts "#{@x} :: #{@y} :: #{@f}"
+		"#{@x} #{@y} #{@f}"
 	end
 end

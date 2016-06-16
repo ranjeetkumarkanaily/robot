@@ -28,11 +28,8 @@ class Command
 		when 'RIGHT'
 			@robot.right
 		when 'REPORT'
-			@robot.to_s
+			puts @robot.to_s
 		end
 	end
 
 end
-
-cmd = Command.new "play.txt"
-cmd.readFile
